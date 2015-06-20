@@ -33,7 +33,7 @@ class MainClass extends PluginBase implements Listener{
     }
 
 	public function PlayerMove(PlayerMoveEvent $event){
-        if ($event->getPlayer()->getY() < 24  and $event->getPlayer()->onGround == false){
+        if ($event->getPlayer()->getY() < 24  and $event->getPlayer()->getGamemode() != 1  and$event->getPlayer()->onGround == false){
             $this->players[$event->getPlayer()->getName()] += 1;
         }else{
             $this->players[$event->getPlayer()->getName()] = 0;
