@@ -1,0 +1,10 @@
+#name, main, version and api are required
+name: NoFlyHack
+main: NoFlyHack\MainClass
+version: 1.0.0
+api: [1.0.0]
+
+load: POSTWORLD
+author: Guillaume351
+description: Kick player using fly hack
+website: www.cookie-build.com
