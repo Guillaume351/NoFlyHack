@@ -24,13 +24,15 @@ class MainClass extends PluginBase implements Listener{
     }
 
     public function PlayerMove(PlayerMoveEvent $event){
-        if ($event->getPlayer()->getY() < 24  and $event->getPlayer()->getGamemode() != 1  and $event->getPlayer()->getGamemode() != 3 and $event->getPlayer()->onGround == false){
-            $this->players[$event->getPlayer()->getName()] += 1;
+        $player = $event->getPlayer();
+        $name = $player->getName();
+        if ($player->getY() < 24 and $player->getGamemode() != 1 and $player->getGamemode() != 3 and $player->onGround == false){
+            $this->players[$name] += 1;
         }else{
-            $this->players[$event->getPlayer()->getName()] = 0;
+            $this->players[$name] = 0;
         }
-        if($this->players[$event->getPlayer()->getName()] > 48){
-            $event->getPlayer()->kick("Fly detected.".TextFormat::RED." \nPlease disable all mods.");
+        if($this->players[$name] > 48){
+            $player->kick("Fly detected.".TextFormat::RED." \nPlease disable all mods.");
         }
     }
 
