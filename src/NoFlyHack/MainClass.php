@@ -35,8 +35,8 @@ class MainClass extends PluginBase implements Listener{
 	        }
 	        if($this->players[$name] === 3){
 	            $this->getServer()->broadcastMessage(TextFormat::RED.$name. TextFormat::YELLOW." banned for ".TextFormat::RED."FLY HACK");
-	            $event->getPlayer()->kick("Fly detected.".TextFormat::RED."  You have been IP banned.");
 	            $this->getServer()->getIPBans()->addBan($player->getAddress());
+	            $event->getPlayer()->kick("Fly detected.".TextFormat::RED."  You have been IP banned.");
 	        }
 	}
 }
