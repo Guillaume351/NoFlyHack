@@ -1,6 +1,4 @@
-<?php
-
-namespace NoFlyHack;
+<?ph NoFlyHack;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
